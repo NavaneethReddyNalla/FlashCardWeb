@@ -4,7 +4,8 @@
     width: 25vw;
     min-width: 320px;
     background-color: gray;
-    right: -25vw;
+    right: min(-320px, -25vw);
+    z-index: 2;
     transition: all 0.5s;
     display: flex;
     flex-direction: column;
@@ -12,7 +13,7 @@
 }
 
 .drawer.drawer-open {
-    right: 0px;
+    right: 0vw;
 }
 
 .drawer-close {
