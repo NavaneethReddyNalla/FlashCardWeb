@@ -19,10 +19,7 @@ function Dashboard() {
   return (
     <>
       <div className="navButtonContainer">
-        <button
-          className="btn bg-info navButton"
-          onClick={() => setDrawer(true)}
-        >
+        <button className="navButton" onClick={() => setDrawer(true)}>
           <GiHamburgerMenu className="fs-1" />
         </button>
       </div>

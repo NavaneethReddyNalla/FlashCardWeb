@@ -6,6 +6,7 @@ import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
 import { useSelector } from "react-redux";
 import Dashboard from "./pages/Dashboard/Dashboard";
+import FlashPage from "./pages/FlashPage/FlashPage";
 
 function App() {
   const { loggedIn } = useSelector((state) => state.user);
@@ -18,6 +19,7 @@ function App() {
         {
           path: "",
           element: loggedIn ? <Dashboard /> : <Home />,
+          children: [{ path: "", element: <FlashPage /> }],
         },
         {
           path: "login",

@@ -6,7 +6,7 @@ function Drawer({ open, setOpen, children }) {
   return (
     <div className={`drawer ${open && "drawer-open"}`}>
       <div className="btn drawer-close" onClick={() => setOpen(false)}>
-        <IoClose className="fs-2" />
+        <IoClose className="fs-2 drawer-close-icon" />
       </div>
       {children}
     </div>

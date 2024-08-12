@@ -4,7 +4,6 @@
     width: 20vw;
     background-color: gray;
     right: -20vw;
-    z-index: 2;
     transition: all 0.5s;
     display: flex;
     flex-direction: column;
@@ -17,6 +16,9 @@
 
 .drawer-close {
     align-self: flex-end;
+}
+
+.drawer-close-icon {
     color: white;
 }
 
