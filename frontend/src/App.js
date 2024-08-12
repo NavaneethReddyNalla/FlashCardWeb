@@ -4,8 +4,12 @@ import Home from "./pages/Home/Home";
 import Root from "./pages/Root/Root";
 import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
+import { useSelector } from "react-redux";
+import Dashboard from "./pages/Dashboard/Dashboard";
 
 function App() {
+  const { loggedIn } = useSelector((state) => state.user);
+
   const browserRouter = createBrowserRouter([
     {
       path: "/",
@@ -13,7 +17,7 @@ function App() {
       children: [
         {
           path: "",
-          element: <Home />,
+          element: loggedIn ? <Dashboard /> : <Home />,
         },
         {
           path: "login",

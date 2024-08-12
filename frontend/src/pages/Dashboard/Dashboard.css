@@ -1,0 +1,6 @@
+.navButton {
+    border-radius: 100%;
+    float: right;
+    margin: 1.8rem;
+    z-index: 4;
+}

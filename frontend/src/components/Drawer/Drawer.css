@@ -1,0 +1,36 @@
+.drawer {
+    position: fixed;
+    height: 100vh;
+    width: 20vw;
+    background-color: gray;
+    right: -20vw;
+    z-index: 2;
+    transition: all 0.5s;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+}
+
+.drawer.drawer-open {
+    right: 0px;
+}
+
+.drawer-close {
+    align-self: flex-end;
+    color: white;
+}
+
+.drawer button {
+    border: solid white 1px;
+    border-left: none;
+    border-right: none;
+    background-color: transparent;
+    color: white;
+    height: 6vh;
+    transition: all 0.2s;
+}
+
+.drawer button:hover {
+    transform: scale(1.01);
+    font-weight: bold;
+}
