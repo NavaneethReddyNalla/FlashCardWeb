@@ -7,10 +7,12 @@ import axios from "axios";
 import { useDispatch } from "react-redux";
 import { setCards } from "../../redux/slices/flashcardSlice";
 import synchronizeCards from "../../util";
+import { useNavigate } from "react-router-dom";
 
 function Strip({ card }) {
   const { userId } = useSelector((state) => state.user);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   async function deleteCard() {
     const user = { userId: userId };
@@ -31,7 +33,10 @@ function Strip({ card }) {
     <div className="strip">
       <h5>{card.question}</h5>
       <div className="controls">
-        <button className="btn btn-warning">
+        <button
+          className="btn btn-warning"
+          onClick={() => navigate(`/edit/${card.id}`, { state: card })}
+        >
           <FaRegEdit className="edit-button" />
         </button>
         <button className="btn btn-danger" onClick={deleteCard}>
