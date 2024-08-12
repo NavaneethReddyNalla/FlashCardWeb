@@ -31,6 +31,7 @@ function FlashPage() {
               .map((card, index) => {
                 return (
                   <div
+                    key={index}
                     className={`carousel-item ${index === 0 ? "active" : ""}`}
                   >
                     <Card

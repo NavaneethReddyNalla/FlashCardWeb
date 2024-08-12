@@ -15,5 +15,5 @@ const flashcardSlice = createSlice({
   },
 });
 
-export const { setCards } = flashcardSlice.actions;
+export const { setCards, insertCard } = flashcardSlice.actions;
 export default flashcardSlice.reducer;

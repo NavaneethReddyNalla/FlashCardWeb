@@ -1,0 +1,14 @@
+.create-form form {
+    width: 50vw;
+    padding: 1rem;
+    color: white;
+}
+
+.create-form {
+    background: linear-gradient(to right, #ff9966, #ff5e62);
+    border-radius: 10px;
+}
+
+.create-form form input {
+    margin-bottom: 1rem;
+}
