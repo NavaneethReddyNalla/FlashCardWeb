@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { setCards } from "../../redux/slices/flashcardSlice";
+import synchronizeCards from "../../util";
 
 function CreateCard() {
   const { register, handleSubmit } = useForm();
@@ -21,10 +22,7 @@ function CreateCard() {
     );
 
     if (res.data.message === "Flashcard created successfully") {
-      const newCards = await axios.get(
-        `${process.env.REACT_APP_HOST_URL}/cards/${userId}`
-      );
-      dispatch(setCards(newCards));
+      synchronizeCards(userId, dispatch, setCards);
       navigate("/");
     }
   }
