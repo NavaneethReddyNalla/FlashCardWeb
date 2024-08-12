@@ -24,7 +24,22 @@ function Dashboard() {
       const res = await axios.get(
         `${process.env.REACT_APP_HOST_URL}/cards/${userId}`
       );
-      dispatch(setCards(res.data));
+
+      if (res.data.length) {
+        dispatch(setCards(res.data));
+      } else {
+        dispatch(
+          setCards([
+            {
+              id: 0,
+              user_id: null,
+              question: "Did you create any cards?",
+              answer: "No. Create some cards from the create cards menu.",
+              category: "No Cards",
+            },
+          ])
+        );
+      }
     };
 
     fetchCards();
@@ -38,8 +53,9 @@ function Dashboard() {
         </button>
       </div>
       <Drawer open={drawer} setOpen={setDrawer}>
-        <button>Create Card</button>
-        <button>Edit Card</button>
+        <button onClick={() => navigate("/")}>Flash Cards</button>
+        <button onClick={() => navigate("/create")}>Create Card</button>
+        <button onClick={() => navigate("/edit")}>Edit Card</button>
         <button onClick={signOut} className="text-danger">
           Sign Out
         </button>

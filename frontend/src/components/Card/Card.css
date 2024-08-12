@@ -1,5 +1,5 @@
 .flash-card {
-    --width: max(16vw, 110px);
+    --width: max(16vw, 180px);
     width: var(--width);
     height: calc(var(--width) * 3 / 2);
     background-color: transparent;

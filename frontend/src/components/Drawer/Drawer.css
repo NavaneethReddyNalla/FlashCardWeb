@@ -5,7 +5,7 @@
     min-width: 320px;
     background-color: gray;
     right: min(-320px, -25vw);
-    z-index: 2;
+    z-index: 4;
     transition: all 0.5s;
     display: flex;
     flex-direction: column;

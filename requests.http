@@ -22,9 +22,9 @@ Content-Type: application/json
 
 {
     "userId": 1,
-    "question": "What is the capital of France?",
-    "answer": "Paris",
-    "category": "Geography"
+    "question": "What's 1 + 1?",
+    "answer": "2",
+    "category": "Maths"
 }
 
 ### Get All Flashcards for User

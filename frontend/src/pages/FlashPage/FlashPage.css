@@ -1,0 +1,26 @@
+.carousel-button {
+    color: black;
+    font-size: 10rem;
+}
+
+.carousel-control-next {
+    margin-right: 10vw;
+}
+
+.carousel-control-prev {
+    margin-left: 10vw
+}
+
+#category, .category-label {
+    position: relative;
+    top: 10vh;
+    margin: auto;
+}
+
+.category-label {
+    margin-right: 1rem;
+}
+
+#category {
+    width: 12vw;
+}

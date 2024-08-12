@@ -3,6 +3,7 @@
     position: fixed;
     right: 0px;
     top: 0px;
+    z-index: 3;
     margin: 1.8rem;
     color: white;
     background-color: black;
