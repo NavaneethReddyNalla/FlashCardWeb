@@ -7,11 +7,14 @@ import { MdNavigateNext, MdNavigateBefore } from "react-icons/md";
 function FlashPage() {
   const { cards } = useSelector((state) => state.flashcards);
   const [category, setCategory] = useState("");
-  const [categories, setCategories] = useState([]);
+  const [categories, setCategories] = useState(
+    Array.from(new Set(cards.map((card) => card.category)))
+  );
 
   useEffect(() => {
     let addedCats = new Set(cards.map((card) => card.category));
     setCategories(Array.from(addedCats));
+    console.log(categories);
 
     if (categories.length) {
       setCategory(categories[0]);
@@ -69,7 +72,7 @@ function FlashPage() {
         name="category"
         id="category"
         onChange={(e) => setCategory(e.target.value)}
-        value={category}
+        defaultValue={category}
       >
         {categories.map((cat, index) => {
           return (

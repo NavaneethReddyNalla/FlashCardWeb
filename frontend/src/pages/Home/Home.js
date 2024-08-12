@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 function Home() {
   return (
     <div className="home p-4">
+      <h1>Flash Card App</h1>
       <Link to="/login" className="d-block btn w-25 mx-auto btn-primary m-1">
         Login
       </Link>
