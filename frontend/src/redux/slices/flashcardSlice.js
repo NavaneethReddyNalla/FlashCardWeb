@@ -9,6 +9,9 @@ const flashcardSlice = createSlice({
     setCards: (state, action) => {
       state.cards = action.payload;
     },
+    insertCard: (state, action) => {
+      state.cards = [...state.cards, action.payload];
+    },
   },
 });
 
